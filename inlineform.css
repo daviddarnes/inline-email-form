@@ -58,6 +58,10 @@
   color: #333;
 }
 
+.inlineemailform textarea {
+  width: 100%;
+}
+
 .inlineemailform .reciever {
   background: #D3E7F9;
   color: #333;
