@@ -1,3 +1,9 @@
 body {
   text-align: center;
+  color: #656565;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  padding-top: 30vh;
 }
