@@ -7,3 +7,9 @@ body {
   font-weight: 300;
   padding-top: 30vh;
 }
+
+a {
+	color: #2087fc;
+	border-bottom: 1px solid #2087fc;
+	text-decoration: none;
+}

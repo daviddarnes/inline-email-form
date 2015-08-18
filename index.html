@@ -1,55 +1,57 @@
 <!DOCTYPE html>
 <head>
   <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inline email form</title>
   <link href="styles.css" media="all" rel="stylesheet">
   <link href="inlineform.css" media="all" rel="stylesheet">
 </head>
 <body>
 
-	<section class="content">
+  <section class="content">
 
-    <div class="inlineemailform">
+  <div class="inlineemailform">
 
-      <label for="checkbox" class="toggle">Click me!</label>
+    <label for="checkbox" class="toggle">Click me!</label>
 
-      <input type="checkbox" id="checkbox" name="checkbox">
+    <input type="checkbox" id="checkbox" name="checkbox">
 
-      <form id="inlineemailform" class="form" method="POST">
+    <form id="inlineemailform" class="form" method="POST">
 
-        <input type="hidden" name="_subject" value="Inline form contact" />
+      <input type="hidden" name="_subject" value="Inline form contact" />
 
-        <div class="formgroup">
-          <span class="label" class="to">To:</span> <span id="reciever" class="reciever"></span>
-        </div>
+      <div class="formgroup">
+        <span class="label" class="to">To:</span> <span id="reciever" class="reciever"></span>
+      </div>
 
-        <div class="formgroup">
-      	   <label class="label" for="subject">Subject:</label> <input type="text" name="subject" required>
-         </div>
+      <div class="formgroup">
+         <label class="label" for="subject">Subject:</label> <input type="text" name="subject" required>
+       </div>
 
-        <div class="formgroup  formgroup--from">
-          <label class="label" for="_replyto">From:</label> <input type="email" name="_replyto" placeholder="email@website.com" required>
-        </div>
+      <div class="formgroup  formgroup--from">
+        <label class="label" for="_replyto">From:</label> <input type="email" name="_replyto" placeholder="email@website.com" required>
+      </div>
 
-        <div class="formgroup  formgroup--message">
-      	   <textarea name="message" placeholder="Just sayin' hi..."></textarea>
-        </div>
+      <div class="formgroup  formgroup--message">
+         <textarea name="message" placeholder="Just sayin' hi..."></textarea>
+      </div>
 
-        <input type="text" name="_gotcha" style="display:none" />
+      <input type="text" name="_gotcha" style="display:none" />
 
-        <div class="formgroup  formgroup--send">
-      	   <input class="submit" type="submit" value="Send">
-        </div>
+      <div class="formgroup  formgroup--send">
+         <input class="submit" type="submit" value="Send">
+      </div>
 
-      </form>
+    </form>
 
-    </div>
-    <br/>
-    <p><strong>Note:</strong> If you're testing this out please use your own email address,<br/>that way I can reply and confirm that it really does work!</p>
+  </div>
+  <br/>
+  <p>Inspired by <a href="https://dribbble.com/shots/2197764-Inline-email-form">Mike Stezycki</a>, who was inspired by <a href="https://twitter.com/pixxel/status/631409650001424384">Mark Collins</a>.</p>
+  <p><strong>Note:</strong> If you're testing this out please use your own email address,<br/>that way I can reply and confirm that it really does work!</p>
 
-	</section>
+  </section>
 
-	<a href="https://github.com/daviddarnes/inline-email-form"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+  <a href="https://github.com/daviddarnes/inline-email-form"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
 
   <script>
     var contactform =  document.getElementById('inlineemailform');
