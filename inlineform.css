@@ -24,10 +24,10 @@
   background: #ffffff;
   width: 300px;
   position: absolute;
-  left: -150px;
+  left: 50%;
   top: 100%;
   margin-top: 15px;
-  margin-left: 30px;
+  margin-left: -150px;
   border-radius: 6px;
   box-shadow: 0 0 6px rgba(0,0,0,0.4);
   text-align: left;
@@ -52,10 +52,16 @@
 
 .inlineemailform input,
 .inlineemailform textarea {
+  -webkit-appearance: none;
   border: none;
   outline: none;
   margin: 0;
+  padding: 0;
   color: #333;
+}
+
+.inlineemailform textarea {
+  width: 100%;
 }
 
 .inlineemailform .reciever {
@@ -94,6 +100,7 @@
 
 .inlineemailform .formgroup * {
   display: inline-block;
+  vertical-align: middle;
 }
 
 .inlineemailform textarea {
@@ -135,11 +142,13 @@
   opacity: 1;
   pointer-events: auto;
 
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  -webkit-animation: open .3s;
+/*   -webkit-animation: open .3s; */
   animation: open .3s;
+
+  transform: scale(1);
+  -webkit-transform: scale(1);
 }
+/*
 
 @-webkit-keyframes open {
   0% {
@@ -152,6 +161,7 @@
     -webkit-transform: scale(1);
   }
 }
+*/
 
 @keyframes open {
   0% {
