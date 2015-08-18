@@ -3,39 +3,56 @@
   <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="styles.css" media="all" rel="stylesheet">
-  <link href="inline-form.css" media="all" rel="stylesheet">
+  <link href="inlineform.css" media="all" rel="stylesheet">
 </head>
 <body>
 
-	<main class="main" role="main">
+	<section class="content">
 
-    <div class="dialog-container"><label for="inline-form-checkbox" class="form-toggle">Click me!</label>
+    <div class="inlineemailform">
 
-      <input type="checkbox" id="inline-form-checkbox">
-      <form id="contactform" class="inline-form" method="POST">
+      <label for="checkbox" class="toggle">Click me!</label>
 
-        <span class="reciever">To: <span class="reciever-email">ahoy@stezycki.com</span></span>
+      <input type="checkbox" id="checkbox" name="checkbox">
 
-      	<input type="text" name="subject" placeholder="Subject:" required>
-
-        <input type="email" name="_replyto" placeholder="From: email@website.com" required>
+      <form id="inlineemailform" class="form" method="POST">
 
         <input type="hidden" name="_subject" value="Inline form contact" />
 
-      	<textarea name="message" placeholder="Just sayin' hi..."></textarea>
+        <div class="formgroup">
+          <span class="label" class="to">To: <span id="reciever" class="reciever"></span></span>
+        </div>
 
-      	<input type="text" name="_gotcha" style="display:none" />
+        <div class="formgroup">
+      	   <label class="label" for="subject">Subject:</label><input type="text" name="subject" required>
+         </div>
 
-      	<input type="submit" value="Send">
+        <div class="formgroup  formgroup--from">
+          <label class="label" for="_replyto">From:</label><input type="email" name="_replyto" placeholder="email@website.com" required>
+        </div>
+
+        <div class="formgroup  formgroup--message">
+      	   <textarea name="message" placeholder="Just sayin' hi..."></textarea>
+        </div>
+
+        <input type="text" name="_gotcha" style="display:none" />
+
+        <div class="formgroup  formgroup--send">
+      	   <input type="submit" value="Send">
+        </div>
 
       </form>
 
     </div>
 
-    <p>go;wgreigerighergiergioergheriougheroiugegouegeuogerugverugeruergeruigruogbegukebeubgeuogvegueryguervgeruygverugveguoevguoergyveuogverguyvegyuoervg</p>
-	</main>
+	</section>
+
   <script>
-    var contactform =  document.getElementById('contactform');
-    contactform.setAttribute('action', '//formspree.io/' + 'me' + '@' + 'daviddarnes' + '.' + 'com');
+    var contactform =  document.getElementById('inlineemailform');
+    var reciever =  document.getElementById('reciever');
+    var email = 'me' + '@' + 'daviddarnes' + '.' + 'com';
+      contactform.setAttribute('action', '//formspree.io/' + email);
+      reciever.textContent = email;
   </script>
+
 </body>
