@@ -37,13 +37,14 @@
       </div>
 
       <input type="text" name="_gotcha" style="display:none" />
-      <input type="hidden" name="_next" value="/inline-email-form/" />
+      <input type="hidden" name="_next" value="#thanks" />
 
       <div class="formgroup  formgroup--send">
          <input class="submit" type="submit" value="Send">
       </div>
 
       <div class="thanks">
+	      <span class="tick">&#10003;</span>
 	      <p>Thanks!</p>
       </div>
 
@@ -62,7 +63,7 @@
     var contactform =  document.getElementById('inlineemailform');
     var reciever =  document.getElementById('reciever');
     var email = 'me' + '@' + 'daviddarnes' + '.' + 'com';
-      contactform.setAttribute('action', '//formspree.io/' + email);
+      contactform.setAttribute('action', 'https://formspree.io/' + email);
       reciever.textContent = email;
 
     function isParent(parent, child) {

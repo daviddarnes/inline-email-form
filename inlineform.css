@@ -152,6 +152,20 @@
   -webkit-transform: scale(1);
 }
 
+.tick {
+	display: inline-block;
+	border-radius: 100%;
+	background: green;
+	color: white;
+	margin-top: 25%;
+	font-size: 65px;
+	padding: 30px 17px;
+}
+
+.thanks p {
+	font-weight: 400;
+}
+
 .inlineemailform .form {
   opacity: 0;
   pointer-events: none;
