@@ -123,6 +123,35 @@
   cursor: pointer;
 }
 
+.thanks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  padding: 5px 20px;
+  border-radius: inherit;
+  text-align: center;
+
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.thanks:target {
+  opacity: 1;
+  pointer-events: auto;
+
+  animation: open .3s;
+
+  transform: scale(1);
+  -webkit-transform: scale(1);
+}
+
 .inlineemailform .form {
   opacity: 0;
   pointer-events: none;
