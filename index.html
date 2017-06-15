@@ -22,7 +22,7 @@
       <input type="hidden" name="_subject" value="Inline form contact" />
 
       <div class="formgroup">
-        <span class="label" class="to">To:</span> <span id="reciever" class="reciever"></span>
+        <span class="label" class="to">To:</span> <span id="reciever" class="reciever">email@website.com</span>
       </div>
 
       <div class="formgroup">
@@ -61,9 +61,15 @@
   <script>
     var contactform =  document.getElementById('inlineemailform');
     var reciever =  document.getElementById('reciever');
-    var email = 'me' + '@' + 'daviddarnes' + '.' + 'com';
-      contactform.setAttribute('action', 'https://formspree.io/' + email);
-      reciever.textContent = email;
+    var emailField = document.querySelector('form input[type=email]');
+
+    function setFormAction() {
+        var email = emailField.value;
+        contactform.setAttribute('action', 'https://formspree.io/' + email);
+        reciever.textContent = email;
+    };
+
+    emailField.addEventListener('keyup', setFormAction);
 
     function isParent(parent, child) {
       var node = child.parentNode;
